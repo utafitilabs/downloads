@@ -1,0 +1,199 @@
+/*
+   The palette is the masterbrand's, written in as literals: deep jade on bone
+   paper by day, mint on the night canvas after dark. The same two pairs the
+   mark itself carries.
+*/
+:root {
+  --paper: #f3f2eb;
+  --ink: #16201c;
+  --ink-soft: #55635c;
+  --accent: #0f8a68;
+  --accent-ink: #f3f2eb;
+  --rule: #ddddd2;
+  --panel: #fbfaf5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0c1310;
+    --ink: #e6ece8;
+    --ink-soft: #93a29b;
+    --accent: #3ed9a8;
+    --accent-ink: #0c1310;
+    --rule: #1e2b25;
+    --panel: #111a16;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Masthead */
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 0;
+}
+
+.masthead-in {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0;
+}
+
+.mark { display: block; }
+
+.wordmark {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* Body */
+.lede {
+  margin: 2.5rem 0 2rem;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 34rem;
+}
+
+.app {
+  border-top: 1px solid var(--rule);
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.app-name {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+.app-what {
+  margin: 0.35rem 0 1.5rem;
+  color: var(--ink-soft);
+}
+
+/* The latest build */
+.latest {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.version {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+.meta {
+  margin: 0.25rem 0 1.1rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.button:hover { filter: brightness(1.08); }
+
+.button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.size {
+  margin-left: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.digest {
+  margin: 1.1rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.digest code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--ink);
+}
+
+.status { margin: 0; color: var(--ink-soft); }
+
+.status a { color: var(--accent); }
+
+/* Older versions */
+.older { margin-top: 1rem; }
+
+.older summary {
+  cursor: pointer;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.older-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+.older-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.95rem;
+}
+
+.older-list a { color: var(--accent); }
+
+.older-list .when {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+/* Footer */
+.foot {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.foot a { color: var(--accent); }

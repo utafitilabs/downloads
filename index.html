@@ -1,0 +1,78 @@
+<!doctype html>
+<!--
+  The uhifadhi download page.
+
+  Served by GitHub Pages from main, at uhifadhilabs.github.io/downloads today
+  and at downloads.uhifadhi.org once that domain is attached (the domain
+  attaches separately; nothing in this file needs to change for it).
+
+  Dependency-free on purpose: hand-written HTML, one stylesheet, one small
+  script. It is a static page outside the application fleet, so it may use
+  plain JavaScript. The release list is read from GitHub's public releases API
+  in the reader's browser, which is why a new release shows up here without
+  this page being rebuilt.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloads — uhifadhi</title>
+<meta name="description" content="Download the uhifadhi field applications.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-in">
+    <img class="mark" src="assets/favicon.svg" alt="" width="40" height="40">
+    <div>
+      <p class="wordmark">uhifadhi</p>
+      <p class="tagline">Downloads</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="lede">
+    The uhifadhi field applications, free of charge. Pick an app, download the
+    latest build, and check its SHA&#8209;256 against the one printed here.
+  </p>
+
+  <!--
+    One section per app. `data-prefix` is the release-tag prefix the script
+    filters this repository's releases by, so each app lists only its own
+    builds.
+  -->
+  <section class="app" data-prefix="doria-">
+    <h2 class="app-name">Doria</h2>
+    <p class="app-what">The uhifadhi field app for patrols and observations.</p>
+
+    <div class="latest" data-latest>
+      <p class="status" data-status>Loading releases&#8230;</p>
+    </div>
+
+    <details class="older" data-older hidden>
+      <summary>Older versions</summary>
+      <ul class="older-list" data-older-list></ul>
+    </details>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p>
+    The apps are free of charge. Their source is proprietary and is not
+    published in this repository.
+  </p>
+  <p>
+    <a href="https://github.com/uhifadhilabs/downloads/releases">All releases</a>
+    &#183;
+    <a href="https://github.com/uhifadhilabs/downloads">This repository</a>
+  </p>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
