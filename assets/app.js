@@ -10,8 +10,8 @@
 (function () {
   'use strict';
 
-  var API = 'https://api.github.com/repos/uhifadhilabs/downloads/releases?per_page=100';
-  var RELEASES_PAGE = 'https://github.com/uhifadhilabs/downloads/releases';
+  var API = 'https://api.github.com/repos/utafitilabs/downloads/releases?per_page=100';
+  var RELEASES_PAGE = 'https://github.com/utafitilabs/downloads/releases';
 
   var sections = document.querySelectorAll('.app[data-prefix]');
   if (!sections.length) { return; }
